@@ -1,0 +1,14 @@
+
+# docker run --name crud-api -e POSTGRESQL_USERNAME=crud -e POSTGRESQL_PASSWORD=crud -e POSTGRESQL_DATABASE=crudapi -p 5432:5432 bitnami/postgresql:latest
+
+version: '3'
+
+services: 
+  crud-api:
+    image: bitnami/postgresql:latest
+    ports: 
+      - 5432:5432
+    environment: 
+      - POSTGRESQL_USERNAME=crud
+      - POSTGRESQL_PASSWORD=crud
+      - POSTGRESQL_DATABASE=crudapi
